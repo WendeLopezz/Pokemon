@@ -1,2 +1,2 @@
 # Pokemon
-Este es el repositorio de Pokemón
+Este es el repositorio de Pokémon
