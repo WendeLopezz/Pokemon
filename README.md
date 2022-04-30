@@ -1,2 +1,8 @@
 # Pokemon
-Este es el repositorio de Pokémon
+
+## Pokemon class
+
+
+## Integrantes 
+
+Wende López López
