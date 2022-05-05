@@ -1,62 +1,78 @@
 package entrenador;
 
+import java.util.ArrayList;
+
 import pokemon.Pokemon;
 
 public class Entrenador {
     
-    private String nombre;
-    private Pokemon [] equipo = new Pokemon [4];
-    private Pokemon [] caja;
 
-    public Entrenador(String nom, Pokemon [] equipo, Pokemon [] caja){
-        this.nombre = nom;
-        this.equipo = equipo;
-        this.caja = caja;        
+    private String nombre;
+    private ArrayList<Pokemon> equipo;
+    private  ArrayList<Pokemon> caja;
+    private int pokedollar;
+
+
+    public Entrenador(String nombreParam, ArrayList<Pokemon> equipoParam, ArrayList<Pokemon> cajaParam ){
+        this.nombre = nombreParam;
+        this.equipo = equipoParam;
+        this.caja = cajaParam;
+        this.pokedollar = (int)(Math.random()* 201) + 800;
     }
 
     public String getNombre() {
-        return nombre;
-    }
-    public Pokemon[] getEquipo() {
-        return equipo;
-    }
-    public Pokemon[] getCaja() {
-        return caja;
+        return nombre;        
     }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public void setEquipo(Pokemon[] equipo) {
+    public ArrayList<Pokemon> getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(ArrayList<Pokemon> equipo) {
         this.equipo = equipo;
     }
-    public void setCaja(Pokemon[] caja) {
+
+    public ArrayList<Pokemon> getCaja() {
+        return caja;
+    }
+
+    public void setCaja(ArrayList<Pokemon> caja) {
         this.caja = caja;
     }
-
-    public Boolean moverPokemonCaja(){
-        
-        return true;
+    
+    public int getPokedollar() {
+        return pokedollar;
+    }
+   
+    public void setPokedollar(int pokedollar) {
+        this.pokedollar = pokedollar;
     }
 
-    public Boolean sacarPokemonCaja(){
-        return true;
+    public boolean moverPokemonCaja(Pokemon pokemon){
+        if(this.equipo.size() < 1){
+            this.caja.add(pokemon);
+            return true;
+        }
+        else{
+             return false;
+        }
+          // mover uno de los PokÃ©mon del equipo principal a la caja (siempre que no se quede sin PokÃ©mon en su equipo principal).
     }
 
-    public Boolean capturarPokemon(Pokemon pokemon){
-        
-        return true;
-    }
-
-    public Pokemon generarPokemon(){
-        return new Pokemon();
-    }
-
-    public void combatir(Pokemon pokemon){
+    public boolean moverPokemonEquipo(Pokemon pokemon){
+        if(this.caja.size() < 4 ){
+            this.equipo.add(pokemon);
+            return true;
+        }
+        else{
+        return false;
+        }    // mover uno de los PokÃ©mon de su caja al equipo principal (siempre que no se tengan 4 PokÃ©mon ya en el equipo principal).
 
     }
-
 
 
 }
