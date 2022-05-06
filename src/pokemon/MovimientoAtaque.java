@@ -4,8 +4,8 @@ public class MovimientoAtaque extends Movimiento {
 
     private int potenciaAtaque;
 
-    MovimientoAtaque(Tipo tipo, int estamina, int potenciaAtaque) {
-        super(tipo, estamina);
+    MovimientoAtaque(Tipo tipo, int estamina, int potenciaAtaque, String nombre) {
+        super(tipo, estamina, nombre);
         this.potenciaAtaque = potenciaAtaque;
     }
 

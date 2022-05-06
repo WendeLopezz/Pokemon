@@ -3,10 +3,18 @@ package pokemon;
 public abstract class Movimiento {
     private Tipo tipo;
     private int estamina;
+    private String nombre;
 
-    Movimiento(Tipo tipo, int estamina) {
+    Movimiento(Tipo tipo, int estamina, String nombre) {
         this.tipo = tipo;
         this.estamina = estamina;
+        this.nombre = nombre;
+    }
+    public String getNombre() {
+        return nombre;
+    }
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getEstamina() {

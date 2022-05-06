@@ -5,8 +5,8 @@ public class MovimientoMejora extends Movimiento {
     private Mejora mejoraAplicar;
     private int numTurno;
 
-    MovimientoMejora(Tipo tipo, int estamina, Mejora mejoraAplicar, int numTurno) {
-        super(tipo, estamina);
+    MovimientoMejora(Tipo tipo, int estamina, Mejora mejoraAplicar, int numTurno, String nombre) {
+        super(tipo, estamina, nombre);
         this.mejoraAplicar = mejoraAplicar;
         this.numTurno = numTurno;
     }

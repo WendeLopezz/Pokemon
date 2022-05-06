@@ -4,8 +4,8 @@ public class MovimientoEstado extends Movimiento {
 
     private Estado estadoAplicar;
 
-    MovimientoEstado(Tipo tipo, int estamina, Estado estadoAplicar) {
-        super(tipo, estamina);
+    MovimientoEstado(Tipo tipo, int estamina, Estado estadoAplicar, String nombre) {
+        super(tipo, estamina, nombre);
         this.estadoAplicar = estadoAplicar;
 
     }
