@@ -62,19 +62,18 @@ public class Combate {
         this.numPokemonKORival = numPokemonKORival;
     }
 
-    public boolean retirarse(){
-        return true;
+    public Entrenador retirarse(){
+        this.jugador.setPokedollar(this.jugador.getPokedollar()*2/3);
+        this.setGanador(rival);
+        return ganador;
         // Un entrenador siempre podrá retirarse del combate si así lo desea,
     }
 
-    public boolean entregraPokemon(){
-        if(numPokemonKOJugador > numPokemonKORival){
-            
-        }
-        if(numPokemonKORival > numPokemonKOJugador){
-
-        }
-        return false;
+    public void comprobarGanador(){
+        if (this.numPokemonKORival == 4)
+            this.setGanador(jugador);
+        if (this.numPokemonKOJugador == 4)
+            this.setGanador(rival);
         // El entrenador que pierda el combate deberá entregar al entrenador ganador 1⁄3 de su número de pokédollars,
     }
 
