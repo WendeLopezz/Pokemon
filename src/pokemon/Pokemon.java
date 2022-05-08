@@ -19,10 +19,11 @@ public class Pokemon {
     private ArrayList<Movimiento> movimientos;
     private Tipo tipo;
     private Tipo tipo2;
+    private int hp;
 
     public Pokemon(String nombre, String mote, int vitalidad, int ataque, int defensa,
             int ataqueEspecial, int defensaEspecial, int nivel, int estamina, int velocidad,
-            Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia) {
+            Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia, int hp) {
 
         this.fertilidad = 5;
         this.ataque = ataque;
@@ -39,6 +40,15 @@ public class Pokemon {
         this.nivel = nivel;
         this.vitalidad = vitalidad;
         this.experiencia = experiencia;
+        this.hp = hp;
+    }
+
+    public int getHp() {
+        return hp;
+    }
+
+    public void setHp(int hp) {
+        this.hp = hp;
     }
 
     public int getExperiencia() {
@@ -177,9 +187,9 @@ public class Pokemon {
     }
 
     public boolean atacarPokemon(Pokemon pokemon) {
-        //  hp = hp - (p*v + a-d)
-        
-        
+        // hp = hp - (p*v + a-d)
+        this.hp = hp;
+
         return true;
     }
 
@@ -189,7 +199,7 @@ public class Pokemon {
     }
 
     public boolean aprenderAtaque() {
-      
+
         return true;
     }
 
