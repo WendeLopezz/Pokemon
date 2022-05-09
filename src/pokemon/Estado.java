@@ -8,5 +8,12 @@ public enum Estado {
     SIN_ESTADO;
 =======
     
+<<<<<<< HEAD
 >>>>>>> origin/clase_combate
+=======
+    PARALIZADO,
+    DORMIDO,
+    QUEMADO,
+    SIN_ESTADO
+>>>>>>> origin/clase_entrenador
 }
