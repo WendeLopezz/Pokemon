@@ -188,7 +188,7 @@ public class Pokemon {
 
     public boolean atacarPokemon(Pokemon pokemon) {
         // hp = hp - (p*v + a-d)
-        this.hp = hp;
+       // this.hp = hp;
 
         return true;
     }

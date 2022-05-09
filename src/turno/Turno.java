@@ -2,7 +2,6 @@ package turno;
 
 public class Turno {
     
-<<<<<<< HEAD
     private int numTurno;
     private String accionEntrenador;
     private String accionRival;
@@ -35,6 +34,4 @@ public class Turno {
     public void setAccionRival(String accionRival) {
         this.accionRival = accionRival;
     }
-=======
->>>>>>> origin/clase_combate
 }

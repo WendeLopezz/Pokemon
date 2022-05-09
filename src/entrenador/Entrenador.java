@@ -1,12 +1,8 @@
 package entrenador;
-
-<<<<<<< HEAD
-public class Entrenador {
-    
-=======
-import java.util.ArrayList;
+    import java.util.ArrayList;
 
 import pokemon.Pokemon;
+
 
 public class Entrenador {
     
@@ -77,7 +73,4 @@ public class Entrenador {
         }    // mover uno de los PokÃ©mon de su caja al equipo principal (siempre que no se tengan 4 PokÃ©mon ya en el equipo principal).
 
     }
-
-
->>>>>>> origin/clase_entrenador
 }

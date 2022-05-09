@@ -1,6 +1,5 @@
 package combate;
 
-<<<<<<< HEAD
 import java.util.LinkedList;
 import java.util.List;
 
@@ -19,73 +18,30 @@ public class Combate {
     public Combate(){
         turno = new LinkedList<>();
     }
-=======
-import entrenador.Entrenador;
-
-public class Combate {
-    
-    private int numeroPokemonKOJugador;
-    private int numeroPokemonKORival;
-    private Entrenador rival;
-    private Entrenador jugador;
-    private Entrenador ganador;
-    
-
-    public Combate(){
-
-    }
-
-    public int getNumeroPokemonKOJugador() {
-        return numeroPokemonKOJugador;
-    }
-
-    public int getNumeroPokemonKORival() {
-        return numeroPokemonKORival;
-    }
-
-    public Entrenador getGanador() {
-        return ganador;
-    }
-
->>>>>>> origin/clase_entrenador
     public Entrenador getJugador() {
         return jugador;
     }
 
-<<<<<<< HEAD
     public void setJugador(Entrenador jugador) {
         this.jugador = jugador;
     }
     
-=======
->>>>>>> origin/clase_entrenador
     public Entrenador getRival() {
         return rival;
     }
 
-<<<<<<< HEAD
     public void setRival(Entrenador rival) {
         this.rival = rival;
     }
     
     public Entrenador getGanador() {
         return ganador;
-=======
-    
-    public void setNumeroPokemonKOJugador(int numeroPokemonKOJugador) {
-        this.numeroPokemonKOJugador = numeroPokemonKOJugador;
-    }
-
-    public void setNumeroPokemonKORival(int numeroPokemonKORival) {
-        this.numeroPokemonKORival = numeroPokemonKORival;
->>>>>>> origin/clase_entrenador
     }
 
     public void setGanador(Entrenador ganador) {
         this.ganador = ganador;
     }
 
-<<<<<<< HEAD
     public List<Turno> getTurno() {
         return turno;
     }
@@ -130,17 +86,4 @@ public class Combate {
 
 
 
-=======
-    public void setJugador(Entrenador jugador) {
-        this.jugador = jugador;
-    }
-
-    public void setRival(Entrenador rival) {
-        this.rival = rival;
-    }
-
-  
-
-    
->>>>>>> origin/clase_entrenador
 }
