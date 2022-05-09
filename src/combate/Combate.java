@@ -1,5 +1,8 @@
 package combate;
 
+import java.util.LinkedList;
+import java.util.List;
+
 import entrenador.Entrenador;
 import turno.Turno;
 
@@ -8,12 +11,12 @@ public class Combate {
     private Entrenador jugador;
     private Entrenador rival;
     private Entrenador ganador;
-    private Turno turno;
+    private List<Turno> turno;
     private int numPokemonKOJugador;
     private int numPokemonKORival;
     
     public Combate(){
-
+        turno = new LinkedList<>();
     }
     public Entrenador getJugador() {
         return jugador;
@@ -39,12 +42,16 @@ public class Combate {
         this.ganador = ganador;
     }
 
-    public Turno getTurno() {
+    public List<Turno> getTurno() {
         return turno;
     }
-
-    public void setTurno(Turno turno) {
+    
+    public void setTurno(List<Turno> turno) {
         this.turno = turno;
+    }
+
+    public void addTurno(Turno turno){
+        this.turno.add(turno);
     }
 
     public int getNumPokemonKOJugador() {
