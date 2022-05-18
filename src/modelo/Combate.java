@@ -7,14 +7,7 @@ import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-<<<<<<< HEAD
 
-||||||| a88019e
-import entrenador.Entrenador;
-import turno.Turno;
-
-=======
->>>>>>> ac09f2a60376d651eded02404d9995fcf2debed4
 public class Combate {
 
     private Entrenador jugador;

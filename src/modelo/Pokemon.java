@@ -20,21 +20,12 @@ public class Pokemon {
     private ArrayList<Movimiento> movimientos;
     private Tipo tipo;
     private Tipo tipo2;
+    
+    Random ran = new Random();
 
-
-<<<<<<< HEAD
     public Pokemon(String nombre, String mote, int vitalidad, int ataque, int defensa,
             int ataqueEspecial, int defensaEspecial, int nivel, int estamina, int velocidad,
             Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia) {
-||||||| a88019e
-    public Pokemon(String nombre, String mote, int vitalidad, int ataque, int defensa,
-            int ataqueEspecial, int defensaEspecial, int nivel, int estamina, int velocidad,
-            Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia, int hp) {
-=======
-    public Pokemon(String nombre, String mote, Estado estado, Tipo tipo, Tipo tipo2, ArrayList <Movimiento> movimientos) {
-
-        Random ran = new Random();
->>>>>>> ac09f2a60376d651eded02404d9995fcf2debed4
 
         this.fertilidad = 5;
         this.ataque = ran.nextInt(10) + 1;
@@ -48,23 +39,9 @@ public class Pokemon {
         this.estamina = ran.nextInt(10) + 1;
         this.nombre = nombre;
         this.mote = mote;
-<<<<<<< HEAD
         this.nivel = nivel;
         this.vitalidad = vitalidad;
         this.experiencia = experiencia;
-||||||| a88019e
-        this.nivel = nivel;
-        this.vitalidad = vitalidad;
-        this.experiencia = experiencia;
-        this.hp = hp;
-    }
-=======
-        this.nivel = ran.nextInt(10) + 1;
-        this.vitalidad = ran.nextInt(10) + 1;
-        this.experiencia = ran.nextInt(10) + 1;
-        this.hp = ran.nextInt(10) + 1;
-    }
->>>>>>> ac09f2a60376d651eded02404d9995fcf2debed4
 
     }
 

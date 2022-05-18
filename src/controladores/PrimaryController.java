@@ -27,7 +27,7 @@ public class PrimaryController implements Initializable {
     private void captura(ActionEvent event) {
 
         System.out.println("Capturar");
-        System.out.println(this.entrenador.capturar(pokemon));
+        System.out.println(this.entrenador.capturarAPokemon(pokemon));
         System.out.println(this.entrenador.getCaja());
 
     }
@@ -42,7 +42,7 @@ public class PrimaryController implements Initializable {
         // TODO: El entrenador tiene que ser sacado de BBDD
         entrenador = new Entrenador("DobleU", new ArrayList<>(), new ArrayList<>());
         // El Pokemon tiene que ser sacado de BBDD pero coger uno random de la lista al hacer el select
-        pokemon = new Pokemon("Pikachu", "Pika", Estado.SIN_ESTADO, Tipo.ELECTRICO, Tipo.AGUA, new ArrayList<>());
+        
     }
 
     public void show() {
