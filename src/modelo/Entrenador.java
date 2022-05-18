@@ -1,6 +1,15 @@
 package modelo;
     import java.util.ArrayList;
+<<<<<<< HEAD
 
+||||||| a88019e
+
+import pokemon.Pokemon;
+
+=======
+import java.util.Random;
+
+>>>>>>> ac09f2a60376d651eded02404d9995fcf2debed4
 
 public class Entrenador {
     
@@ -71,6 +80,7 @@ public class Entrenador {
         }    // mover uno de los PokÃ©mon de su caja al equipo principal (siempre que no se tengan 4 PokÃ©mon ya en el equipo principal).
 
     }
+<<<<<<< HEAD
 
     public boolean capturarAPokemon(Pokemon pokemon){
         int probalidad = (int)(Math.random()*3);
@@ -91,4 +101,17 @@ public class Entrenador {
             return true;
         }
     }
+||||||| a88019e
+=======
+
+    public boolean capturar(Pokemon p){
+        Random rnd = new Random();
+        int rn = rnd.nextInt(3);
+        if(rn == 2){
+            this.caja.add(p);
+            return true;
+        }
+        return false;
+    }
+>>>>>>> ac09f2a60376d651eded02404d9995fcf2debed4
 }

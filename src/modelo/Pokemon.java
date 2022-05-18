@@ -1,6 +1,7 @@
 package modelo;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Pokemon {
     private String nombre;
@@ -21,25 +22,49 @@ public class Pokemon {
     private Tipo tipo2;
 
 
+<<<<<<< HEAD
     public Pokemon(String nombre, String mote, int vitalidad, int ataque, int defensa,
             int ataqueEspecial, int defensaEspecial, int nivel, int estamina, int velocidad,
             Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia) {
+||||||| a88019e
+    public Pokemon(String nombre, String mote, int vitalidad, int ataque, int defensa,
+            int ataqueEspecial, int defensaEspecial, int nivel, int estamina, int velocidad,
+            Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia, int hp) {
+=======
+    public Pokemon(String nombre, String mote, Estado estado, Tipo tipo, Tipo tipo2, ArrayList <Movimiento> movimientos) {
+
+        Random ran = new Random();
+>>>>>>> ac09f2a60376d651eded02404d9995fcf2debed4
 
         this.fertilidad = 5;
-        this.ataque = ataque;
-        this.ataqueEspecial = ataqueEspecial;
-        this.defensa = defensa;
-        this.defensaEspecial = defensaEspecial;
+        this.ataque = ran.nextInt(10) + 1;
+        this.ataqueEspecial = ran.nextInt(10) + 1;
+        this.defensa = ran.nextInt(10) + 1;
+        this.defensaEspecial = ran.nextInt(10) + 1;
         this.estado = estado;
         this.tipo = tipo;
         this.tipo2 = tipo2;
         this.movimientos = movimientos;
-        this.estamina = estamina;
+        this.estamina = ran.nextInt(10) + 1;
         this.nombre = nombre;
         this.mote = mote;
+<<<<<<< HEAD
         this.nivel = nivel;
         this.vitalidad = vitalidad;
         this.experiencia = experiencia;
+||||||| a88019e
+        this.nivel = nivel;
+        this.vitalidad = vitalidad;
+        this.experiencia = experiencia;
+        this.hp = hp;
+    }
+=======
+        this.nivel = ran.nextInt(10) + 1;
+        this.vitalidad = ran.nextInt(10) + 1;
+        this.experiencia = ran.nextInt(10) + 1;
+        this.hp = ran.nextInt(10) + 1;
+    }
+>>>>>>> ac09f2a60376d651eded02404d9995fcf2debed4
 
     }
 
@@ -178,11 +203,13 @@ public class Pokemon {
         return true;
     }
 
-    public boolean atacarPokemon(Pokemon pokemon) {
-        // hp = hp - (p*v + a-d)
-       // this.hp = hp;
-
-        return true;
+    public boolean atacarPokemon(Pokemon pokemonRival) {
+        int danioRival = this.ataque - pokemonRival.defensa;
+        if(danioRival >= 0){
+            pokemonRival.setVitalidad(pokemonRival.vitalidad - danioRival); 
+            return true;
+        }
+        return false;
     }
 
     public boolean descansar() {
