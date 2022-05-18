@@ -1,10 +1,12 @@
-package combate;
+package modelo;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
-import entrenador.Entrenador;
-import turno.Turno;
 
 public class Combate {
 
@@ -14,10 +16,13 @@ public class Combate {
     private List<Turno> turno;
     private int numPokemonKOJugador;
     private int numPokemonKORival;
+    public static final String PATH = "./log/combate.log";
     
     public Combate(){
         turno = new LinkedList<>();
+
     }
+    
     public Entrenador getJugador() {
         return jugador;
     }
@@ -42,16 +47,12 @@ public class Combate {
         this.ganador = ganador;
     }
 
-    public List<Turno> getTurno() {
-        return turno;
-    }
-    
-    public void setTurno(List<Turno> turno) {
-        this.turno = turno;
+   public List<Turno> getTurno() {
+       return turno;
     }
 
-    public void addTurno(Turno turno){
-        this.turno.add(turno);
+    public void setTurno(List<Turno> turno) {
+        this.turno = turno;
     }
 
     public int getNumPokemonKOJugador() {
@@ -63,7 +64,7 @@ public class Combate {
 
     public int getNumPokemonKORival() {
         return numPokemonKORival;
-    }
+    } 
 
     public void setNumPokemonKORival(int numPokemonKORival) {
         this.numPokemonKORival = numPokemonKORival;
@@ -73,17 +74,41 @@ public class Combate {
         this.jugador.setPokedollar(this.jugador.getPokedollar()*2/3);
         this.setGanador(rival);
         return ganador;
-        // Un entrenador siempre podrá retirarse del combate si así lo desea,
+        // Un entrenador siempre podrÃ¡ retirarse del combate si asÃ­Â­ lo desea,
     }
 
     public void comprobarGanador(){
-        if (this.numPokemonKORival == 4)
-            this.setGanador(jugador);
-        if (this.numPokemonKOJugador == 4)
-            this.setGanador(rival);
-        // El entrenador que pierda el combate deberá entregar al entrenador ganador 1⁄3 de su número de pokédollars,
+        if(this.numPokemonKOJugador == 4)
+        this.setGanador(rival);
+        if(this.numPokemonKORival == 4)
+        this.setGanador(jugador);    
+    
+        // El entrenador que pierda el combate deberÃ¡ entregar al entrenador ganador 1/3 de su nÃºmero de pokedollars,
+    }
+    
+    public void addTurno(Turno turno){
+        this.turno.add(turno);
+    }
+
+    public void escribirCombate(){
+        File fichero= new File(PATH);
+        try {
+            FileWriter fileWriter = new FileWriter(fichero);
+            BufferedWriter bWriter = new BufferedWriter(fileWriter);
+
+            for (Turno turno : turno) {
+                bWriter.write("Tunrno "+ turno.getNumTurno()+ ":\n" );
+                bWriter.write("Entrenador: "+ turno.getAccionEntrenador()+ "\n");
+                bWriter.write("Rival: "+ turno.getAccionRival()+ "\n");
+            }
+            bWriter.close();
+            
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
-
 }
+

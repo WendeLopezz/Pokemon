@@ -1,4 +1,4 @@
-package turno;
+package modelo;
 
 public class Turno {
     
@@ -6,11 +6,12 @@ public class Turno {
     private String accionEntrenador;
     private String accionRival;
 
-    public Turno(){
-    this.numTurno = 0;
-    this.accionEntrenador= "";
-    this.accionRival= "";
+    public Turno(int paramNumTurno,String paramAccionEntrenador, String paramAccionRival){
+    this.numTurno = paramNumTurno;
+    this.accionEntrenador= paramAccionEntrenador;
+    this.accionRival= paramAccionRival;
     }
+
     public int getNumTurno() {
         return numTurno;
     }
@@ -34,4 +35,7 @@ public class Turno {
     public void setAccionRival(String accionRival) {
         this.accionRival = accionRival;
     }
+    
+
+
 }

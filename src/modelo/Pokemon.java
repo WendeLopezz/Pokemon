@@ -1,4 +1,4 @@
-package pokemon;
+package modelo;
 
 import java.util.ArrayList;
 
@@ -19,11 +19,11 @@ public class Pokemon {
     private ArrayList<Movimiento> movimientos;
     private Tipo tipo;
     private Tipo tipo2;
-    private int hp;
+
 
     public Pokemon(String nombre, String mote, int vitalidad, int ataque, int defensa,
             int ataqueEspecial, int defensaEspecial, int nivel, int estamina, int velocidad,
-            Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia, int hp) {
+            Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia) {
 
         this.fertilidad = 5;
         this.ataque = ataque;
@@ -40,15 +40,7 @@ public class Pokemon {
         this.nivel = nivel;
         this.vitalidad = vitalidad;
         this.experiencia = experiencia;
-        this.hp = hp;
-    }
 
-    public int getHp() {
-        return hp;
-    }
-
-    public void setHp(int hp) {
-        this.hp = hp;
     }
 
     public int getExperiencia() {
@@ -255,5 +247,13 @@ public class Pokemon {
                 break;
         }
         return numDebil;
+    }
+    public boolean atacar(Pokemon rival){
+        int danioRival = this.ataque - rival.defensa;
+        if(danioRival >= 0){
+            rival.setVitalidad(rival.vitalidad - danioRival);
+            return true;
+        }
+        return false; 
     }
 }

@@ -1,7 +1,5 @@
-package entrenador;
+package modelo;
     import java.util.ArrayList;
-
-import pokemon.Pokemon;
 
 
 public class Entrenador {
@@ -72,5 +70,25 @@ public class Entrenador {
         return false;
         }    // mover uno de los PokÃ©mon de su caja al equipo principal (siempre que no se tengan 4 PokÃ©mon ya en el equipo principal).
 
+    }
+
+    public boolean capturarAPokemon(Pokemon pokemon){
+        int probalidad = (int)(Math.random()*3);
+        if (probalidad == 0){
+            System.out.println("El pokémon no ha sido capturado.");
+            return false;
+        }
+        else{
+            System.out.println("El pokémon ha sido capturado.");
+            if (this.equipo.size() == 4){
+                this.caja.add(pokemon);
+                System.out.println("Se añadió a "+ pokemon.getNombre()+" a la caja.");
+            }
+            else{
+                this.equipo.add(pokemon);
+                System.out.println(pokemon.getNombre()+" se añadió al equipo.");
+            }
+            return true;
+        }
     }
 }
