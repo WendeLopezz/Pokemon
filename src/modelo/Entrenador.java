@@ -1,7 +1,6 @@
-package entrenador;
+package modelo;
     import java.util.ArrayList;
-
-import pokemon.Pokemon;
+import java.util.Random;
 
 
 public class Entrenador {
@@ -72,5 +71,15 @@ public class Entrenador {
         return false;
         }    // mover uno de los PokÃ©mon de su caja al equipo principal (siempre que no se tengan 4 PokÃ©mon ya en el equipo principal).
 
+    }
+
+    public boolean capturar(Pokemon p){
+        Random rnd = new Random();
+        int rn = rnd.nextInt(3);
+        if(rn == 2){
+            this.caja.add(p);
+            return true;
+        }
+        return false;
     }
 }

@@ -1,7 +1,34 @@
 package main;
 
-public class Main {
+import java.io.IOException;
+
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+public class Main extends Application {
     public static void main(String[] args) {
-        System.out.println();
+        launch(args);
     }
+
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("../vistas/captura.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
+
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("Pokemón");
+           primaryStage.show();
+ 
+        } catch (IOException e) {
+
+            e.printStackTrace();
+        }
+
+    }
+
 }

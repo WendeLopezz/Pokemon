@@ -1,10 +1,7 @@
-package combate;
+package modelo;
 
 import java.util.LinkedList;
 import java.util.List;
-
-import entrenador.Entrenador;
-import turno.Turno;
 
 public class Combate {
 
