@@ -10,9 +10,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import modelo.Entrenador;
-import modelo.Estado;
 import modelo.Pokemon;
-import modelo.Tipo;
+
 
 public class PrimaryController implements Initializable {
 

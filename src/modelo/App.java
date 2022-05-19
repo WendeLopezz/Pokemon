@@ -19,6 +19,7 @@ public class App extends Application {
         try{
         Parent root = FXMLLoader.load(getClass().getResource("../vistas/menuCombate.fxml"));
         Scene scene = new Scene(root);
+        
         primaryStage.setScene(scene);
         primaryStage.show();
         } catch(IOException e){
