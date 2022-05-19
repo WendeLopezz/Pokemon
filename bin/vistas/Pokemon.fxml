@@ -53,17 +53,28 @@
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
          <children>
-            <ImageView fitHeight="514.0" fitWidth="649.0" layoutX="-7.0">
+            <ImageView fitHeight="485.0" fitWidth="837.0" layoutX="-12.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Desktop/paisaje-pokemon.jpg" />
+                  <Image url="@C:\Users\wende\Documents\GitHub\Pokemon\rsc\pokemon-pantalla-inicio.gif" />
                </image>
             </ImageView>
-            <Button fx:id="btnCaptura" layoutX="70.0" layoutY="294.0" mnemonicParsing="false" onAction="#sayHelloWorld" onDragDetected="#captura" prefHeight="42.0" prefWidth="101.0" text="Capturar" />
-            <ImageView fitHeight="118.0" fitWidth="101.0" layoutX="56.0" layoutY="356.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="216.0" fitWidth="308.0" layoutX="235.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../Desktop/Pikachu.gif" />
+                  <Image url="@C:\Users\wende\Documents\GitHub\Pokemon\rsc\pokemon.png" />
                </image>
             </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="433.0" layoutY="395.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@C:\Users\wende\Documents\GitHub\Pokemon\rsc\pokeball.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="113.0" fitWidth="151.0" layoutX="599.0" layoutY="341.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@C:\Users\wende\Documents\GitHub\Pokemon\rsc\pikachu-corre.gif" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnCombate" layoutX="349.0" layoutY="236.0" mnemonicParsing="false" onAction="#combatePokemon" prefHeight="44.0" prefWidth="90.0" text="Combate" />
+            <Button fx:id="btnPokemon" layoutX="349.0" layoutY="297.0" mnemonicParsing="false" onAction="#capturaPokemon" prefHeight="44.0" prefWidth="90.0" text="Captura" />
          </children>
     </AnchorPane>
   </children>

@@ -6,10 +6,10 @@ public class Turno {
     private String accionEntrenador;
     private String accionRival;
 
-    public Turno(){
-    this.numTurno = 0;
-    this.accionEntrenador= "";
-    this.accionRival= "";
+    public Turno(int numTurno, String accionEntrenador, String accionRival){
+    this.accionEntrenador = accionEntrenador;
+    this.accionRival = accionRival;
+    this.numTurno = numTurno;
     }
     public int getNumTurno() {
         return numTurno;

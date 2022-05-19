@@ -54,17 +54,18 @@
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="562.0" prefWidth="968.0" VBox.vgrow="ALWAYS">
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="61.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fitHeight="482.0" fitWidth="817.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="492.0" fitWidth="824.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@C:\Users\wende\Documents\GitHub\Pokemon\rsc\paisaje-pokemon.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="btnCaptura" layoutX="316.0" layoutY="36.0" mnemonicParsing="false" onAction="#captura" prefHeight="49.0" prefWidth="129.0" text="Captura" />
-            <ImageView fitHeight="104.0" fitWidth="129.0" layoutX="344.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="btnCaptura" layoutX="340.0" layoutY="36.0" mnemonicParsing="false" onAction="#captura" prefHeight="49.0" prefWidth="129.0" text="Captura" />
+            <ImageView fitHeight="117.0" fitWidth="129.0" layoutX="575.0" layoutY="296.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@C:\Users\wende\Documents\GitHub\Pokemon\rsc\pokemon gif 9.gif" />
                </image>
             </ImageView>
+            <Button fx:id="btnVolver" layoutX="30.0" layoutY="400.0" mnemonicParsing="false" onAction="#volverInicio" text="&lt; Volver" />
          </children>
     </AnchorPane>
   </children>

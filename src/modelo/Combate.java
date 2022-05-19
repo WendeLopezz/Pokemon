@@ -1,5 +1,9 @@
 package modelo;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,6 +15,7 @@ public class Combate {
     private List<Turno> turno;
     private int numPokemonKOJugador;
     private int numPokemonKORival;
+    public static final String PATH = "./log/combate.log";
     
     public Combate(){
         turno = new LinkedList<>();
@@ -41,6 +46,23 @@ public class Combate {
 
     public List<Turno> getTurno() {
         return turno;
+    }
+    public void escribirCombate(){
+        File fichero = new File(PATH);
+        try {
+            FileWriter fw = new FileWriter(fichero);
+            BufferedWriter bw = new BufferedWriter(fw);
+
+            for (Turno turno2 : turno) {
+                bw.write("Turno"+ turno2.getNumTurno()+ "\n");
+                bw.write("Entrenador: "+ turno2.getNumTurno()+ "\n");
+                bw.write("Rival: "+ turno2.getNumTurno()+ "\n");
+            }
+            bw.close();
+            
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
     
     public void setTurno(List<Turno> turno) {
