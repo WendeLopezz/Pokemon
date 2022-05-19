@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import modelo.Combate;
 
 public class TestController implements Initializable {
 
@@ -38,6 +39,7 @@ public class TestController implements Initializable {
     }
 
     @FXML
+<<<<<<< HEAD
     private void capturaPokemon(ActionEvent event) throws IOException {
 
         Parent capturarView;
@@ -52,6 +54,29 @@ public class TestController implements Initializable {
 
         window.show();
 
+||||||| 577f2c3
+    private void sayHelloWorld(ActionEvent event) {
+        System.out.println("Capturado");
+        
+        this.stage.show();
+=======
+    private void sayHelloWorld(ActionEvent event) {
+        System.out.println("Capturado");
+        
+        this.stage.show();
+    }    
+
+    @FXML
+    private void Atacar(ActionEvent event){
+        System.out.println("A la taquer");
+        Combate combate = new Combate();
+        
+    }
+
+    @FXML
+    private void retirarse(ActionEvent event){
+        System.out.println("Hasta luego lucas");
+>>>>>>> estropicio
     }
 
     @Override
