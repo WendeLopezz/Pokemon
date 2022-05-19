@@ -20,11 +20,12 @@ public class Pokemon {
     private ArrayList<Movimiento> movimientos;
     private Tipo tipo;
     private Tipo tipo2;
-    private int hp;
+    
+    Random ran = new Random();
 
-    public Pokemon(String nombre, String mote, Estado estado, Tipo tipo, Tipo tipo2, ArrayList <Movimiento> movimientos) {
-
-        Random ran = new Random();
+    public Pokemon(String nombre, String mote, int vitalidad, int ataque, int defensa,
+            int ataqueEspecial, int defensaEspecial, int nivel, int estamina, int velocidad,
+            Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia) {
 
         this.fertilidad = 5;
         this.ataque = ran.nextInt(10) + 1;
@@ -38,18 +39,10 @@ public class Pokemon {
         this.estamina = ran.nextInt(10) + 1;
         this.nombre = nombre;
         this.mote = mote;
-        this.nivel = ran.nextInt(10) + 1;
-        this.vitalidad = ran.nextInt(10) + 1;
-        this.experiencia = ran.nextInt(10) + 1;
-        this.hp = ran.nextInt(10) + 1;
-    }
+        this.nivel = nivel;
+        this.vitalidad = vitalidad;
+        this.experiencia = experiencia;
 
-    public int getHp() {
-        return hp;
-    }
-
-    public void setHp(int hp) {
-        this.hp = hp;
     }
 
     public int getExperiencia() {
@@ -258,5 +251,13 @@ public class Pokemon {
                 break;
         }
         return numDebil;
+    }
+    public boolean atacar(Pokemon rival){
+        int danioRival = this.ataque - rival.defensa;
+        if(danioRival >= 0){
+            rival.setVitalidad(rival.vitalidad - danioRival);
+            return true;
+        }
+        return false; 
     }
 }

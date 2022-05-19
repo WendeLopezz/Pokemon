@@ -6,11 +6,12 @@ public class Turno {
     private String accionEntrenador;
     private String accionRival;
 
-    public Turno(int numTurno, String accionEntrenador, String accionRival){
-    this.accionEntrenador = accionEntrenador;
-    this.accionRival = accionRival;
-    this.numTurno = numTurno;
+    public Turno(int paramNumTurno,String paramAccionEntrenador, String paramAccionRival){
+    this.numTurno = paramNumTurno;
+    this.accionEntrenador= paramAccionEntrenador;
+    this.accionRival= paramAccionRival;
     }
+
     public int getNumTurno() {
         return numTurno;
     }
@@ -34,4 +35,7 @@ public class Turno {
     public void setAccionRival(String accionRival) {
         this.accionRival = accionRival;
     }
+    
+
+
 }

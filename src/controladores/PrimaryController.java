@@ -37,7 +37,8 @@ public class PrimaryController implements Initializable {
     @FXML
     private void captura(ActionEvent event) {
 
-        System.out.println(this.entrenador.capturar(pokemon));
+        System.out.println("Capturar");
+        System.out.println(this.entrenador.capturarAPokemon(pokemon));
         System.out.println(this.entrenador.getCaja());
 
     }

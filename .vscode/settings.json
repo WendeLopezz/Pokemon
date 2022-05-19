@@ -2,6 +2,19 @@
     "java.project.sourcePaths": ["src"],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
+<<<<<<< HEAD
+        "lib/**/*.jar",
+        "c:\\Users\\werku\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.base.jar",
+        "c:\\Users\\werku\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.controls.jar",
+        "c:\\Users\\werku\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.fxml.jar",
+        "c:\\Users\\werku\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.graphics.jar",
+        "c:\\Users\\werku\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.media.jar",
+        "c:\\Users\\werku\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.swing.jar",
+        "c:\\Users\\werku\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.web.jar",
+        "c:\\Users\\werku\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx-swt.jar"
+||||||| a88019e
+        "lib/**/*.jar"
+=======
         "lib/**/*.jar",
         "c:\\Users\\wende\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.base.jar",
         "c:\\Users\\wende\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.controls.jar",
@@ -12,5 +25,6 @@
         "c:\\Users\\wende\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx.web.jar",
         "c:\\Users\\wende\\Downloads\\javafx-sdk-18.0.1\\lib\\javafx-swt.jar",
         "c:\\Users\\wende\\Documents\\GitHub\\mysql-connector-java-8.0.27.jar"
+>>>>>>> ac09f2a60376d651eded02404d9995fcf2debed4
     ]
 }
