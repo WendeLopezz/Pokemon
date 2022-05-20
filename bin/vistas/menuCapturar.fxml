@@ -37,13 +37,12 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.ControladorCombate">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.ControladorCaptura">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -85,30 +84,30 @@
       </menus>
     </MenuBar>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
-      <children>
-            <ImageView fitHeight="509.0" fitWidth="749.0" pickOnBounds="true" preserveRatio="true">
+         <children>
+            <ImageView fitHeight="445.0" fitWidth="807.0" layoutX="-9.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\background battle pokemon.jpg" />
+                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\fondo_captura.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="btnAtacar" layoutX="259.0" layoutY="320.0" mnemonicParsing="false" onAction="#atacarPokemon" prefHeight="26.0" prefWidth="87.0" text="Combatir" />
-            <Button fx:id="btnVolver" layoutX="443.0" layoutY="320.0" mnemonicParsing="false" onAction="#volver" prefHeight="26.0" prefWidth="87.0" text="Volver" />
-            <ImageView fitHeight="132.0" fitWidth="186.0" layoutX="55.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="btnCapturar" layoutX="68.0" layoutY="396.0" mnemonicParsing="false" onAction="#capturar" prefHeight="26.0" prefWidth="85.0" text="Capturar" />
+            <Button fx:id="btnVolver" layoutX="677.0" layoutY="397.0" mnemonicParsing="false" onAction="#volverVentana" text="Volver" />
+            <ImageView fitHeight="62.0" fitWidth="163.0" layoutX="210.0" layoutY="373.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\zoroark de espaldas (2).gif" />
+                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\pokebola.gif" />
                </image>
             </ImageView>
-            <ImageView fitHeight="128.0" fitWidth="113.0" layoutX="474.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="361.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\charizar de frente (2).gif" />
+                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\pikachu-enojado.gif" />
                </image>
             </ImageView>
-            <TextField fx:id="txtLog" layoutX="67.0" layoutY="82.0" prefHeight="8.0" prefWidth="173.0" />
-            <TextField fx:id="txtLog2" layoutX="474.0" layoutY="82.0" prefHeight="26.0" prefWidth="186.0" />
-            <TextField fx:id="txtLogTurno" layoutX="322.0" layoutY="31.0" prefHeight="26.0" prefWidth="87.0" />
-            <TextField fx:id="txtNumKOUsuario" layoutX="10.0" layoutY="178.0" prefHeight="26.0" prefWidth="113.0" />
-            <TextField fx:id="txtNumKORival" layoutX="577.0" layoutY="166.0" prefHeight="26.0" prefWidth="114.0" />
-      </children>
+            <ImageView fitHeight="150.0" fitWidth="309.0" layoutX="219.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\logo-pokemon.gif" />
+               </image>
+            </ImageView>
+         </children>
     </AnchorPane>
   </children>
 </VBox>

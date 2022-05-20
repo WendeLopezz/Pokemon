@@ -37,12 +37,13 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.TestController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controladores.ControladorCombate">
   <children>
     <MenuBar VBox.vgrow="NEVER">
       <menus>
@@ -87,21 +88,26 @@
       <children>
             <ImageView fitHeight="509.0" fitWidth="749.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@background%20battle%20pokemon.jpg" />
+                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\background battle pokemon.jpg" />
                </image>
             </ImageView>
-            <Button fx:id="btnAtacar" layoutX="259.0" layoutY="320.0" mnemonicParsing="false" onAction="#Atacar" prefHeight="26.0" prefWidth="87.0" text="Combatir" />
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="553.0" layoutY="86.0" pickOnBounds="true" preserveRatio="true">
+            <Button fx:id="btnAtacar" layoutX="259.0" layoutY="320.0" mnemonicParsing="false" onAction="#atacarPokemon" prefHeight="26.0" prefWidth="87.0" text="Combatir" />
+            <Button fx:id="btnVolver" layoutX="443.0" layoutY="320.0" mnemonicParsing="false" onAction="#volver" prefHeight="26.0" prefWidth="87.0" text="Volver" />
+            <ImageView fitHeight="132.0" fitWidth="186.0" layoutX="55.0" layoutY="140.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@C:\Users\werku\Documents\Pokemon\src\vistas\charizar de frente (2).gif" />
+                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\zoroark de espaldas (2).gif" />
                </image>
             </ImageView>
-            <ImageView fitHeight="120.0" fitWidth="200.0" layoutX="14.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="128.0" fitWidth="113.0" layoutX="474.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@C:\Users\werku\Documents\Pokemon\src\vistas\zoroark de espaldas (2).gif" />
+                  <Image url="@C:\Users\werku\Documents\Pokemon\rsc\charizar de frente (2).gif" />
                </image>
             </ImageView>
-            <Button fx:id="btnRetirarse" layoutX="443.0" layoutY="320.0" mnemonicParsing="false" onAction="#retirarse" prefHeight="26.0" prefWidth="87.0" text="Retirarse" />
+            <TextField fx:id="txtLog" layoutX="67.0" layoutY="82.0" prefHeight="8.0" prefWidth="173.0" />
+            <TextField fx:id="txtLog2" layoutX="474.0" layoutY="82.0" prefHeight="26.0" prefWidth="186.0" />
+            <TextField fx:id="txtLogTurno" layoutX="322.0" layoutY="31.0" prefHeight="26.0" prefWidth="87.0" />
+            <TextField fx:id="txtNumKOUsuario" layoutX="10.0" layoutY="178.0" prefHeight="26.0" prefWidth="113.0" />
+            <TextField fx:id="txtNumKORival" layoutX="577.0" layoutY="166.0" prefHeight="26.0" prefWidth="114.0" />
       </children>
     </AnchorPane>
   </children>

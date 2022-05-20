@@ -69,10 +69,18 @@ public class Entrenador {
         }    // mover uno de los PokÃ©mon de su caja al equipo principal (siempre que no se tengan 4 PokÃ©mon ya en el equipo principal).
 
     }
-
-    public boolean capturarAPokemon(Pokemon pokemon){
-        int probalidad = (int)(Math.random()*3);
-        if (probalidad == 0){
+    
+    public boolean capturaPokemon(){
+        Pokemon pokemon = new Pokemon("Pikachu", "Pika",  null, Tipo.ELECTRICO, null );
+        
+        Pokemon pokemon2 = new Pokemon("Zoroark", "Zoro",  null, Tipo.NORMAL, null );
+        
+        Pokemon pokemon3 = new Pokemon("Bulbasur", "Bulbasur",  null, Tipo.PLANTA, null );
+        
+        Pokemon pokemon4 = new Pokemon("Charizard", "Charizar",  null, Tipo.FUEGO, null );
+        
+        int probabilidad = (int)(Math.random()*2);
+        if (probabilidad == 0){
             System.out.println("El pokémon no ha sido capturado.");
             return false;
         }
@@ -80,11 +88,23 @@ public class Entrenador {
             System.out.println("El pokémon ha sido capturado.");
             if (this.equipo.size() == 4){
                 this.caja.add(pokemon);
+                this.caja.add(pokemon2);
+                this.caja.add(pokemon3);
+                this.caja.add(pokemon4);
                 System.out.println("Se añadió a "+ pokemon.getNombre()+" a la caja.");
+                System.out.println("Se añadió a "+pokemon2.getNombre()+" a la caja.");
+                System.out.println("Se añadió a "+pokemon3.getNombre()+" a la caja.");
+                System.out.println("Se añadió a "+pokemon4.getNombre()+" a la caja.");
             }
             else{
                 this.equipo.add(pokemon);
+                this.caja.add(pokemon2);
+                this.caja.add(pokemon3);
+                this.caja.add(pokemon4);
                 System.out.println(pokemon.getNombre()+" se añadió al equipo.");
+                System.out.println(pokemon2.getNombre()+" se añadió al equipo.");
+                System.out.println(pokemon3.getNombre()+" se añadió al equipo.");
+                System.out.println(pokemon4.getNombre()+" se añadió al equipo.");
             }
             return true;
         }

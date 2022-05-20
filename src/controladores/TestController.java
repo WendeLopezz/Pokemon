@@ -1,44 +1,64 @@
 package controladores;
 
+
+
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import modelo.Combate;
 
 public class TestController implements Initializable {
 
     private Stage stage;
 
     @FXML
-    private Button btnCaptura;
+    private Button btnCapturar;
     
     @FXML
-    private Button btnAtacar;
+    private Button btnCombatir;
 
     @FXML
-    private void sayHelloWorld(ActionEvent event) {
-        System.out.println("Capturado");
+    private void ventanaCapturar(ActionEvent event) throws IOException {
         
-        this.stage.show();
+        Parent capturarView;
+
+        capturarView = FXMLLoader.load(getClass().getResource("../vistas/menuCapturar.fxml"));
+
+        Scene capturarScene = new Scene(capturarView);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(capturarScene);
+
+        window.show();
+        
+        //this.stage.show();
     }    
 
     @FXML
-    private void Atacar(ActionEvent event){
-        System.out.println("A la taquer");
-        Combate combate = new Combate();
+    private void ventanaCombate(ActionEvent event) throws IOException{
+        Parent capturarView;
+
+        capturarView = FXMLLoader.load(getClass().getResource("../vistas/menuCombate.fxml"));
+
+        Scene capturarScene = new Scene(capturarView);
+
+        Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        window.setScene(capturarScene);
+
+        window.show();
+        
         
     }
-
-    @FXML
-    private void retirarse(ActionEvent event){
-        System.out.println("Hasta luego lucas");
-    }
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 

@@ -20,33 +20,64 @@ public class Pokemon {
     private ArrayList<Movimiento> movimientos;
     private Tipo tipo;
     private Tipo tipo2;
+    private int idPokemon;
+    
     
     Random ran = new Random();
 
-    public Pokemon(String nombre, String mote, int vitalidad, int ataque, int defensa,
-            int ataqueEspecial, int defensaEspecial, int nivel, int estamina, int velocidad,
-            Estado estado, ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2, int experiencia) {
+    public Pokemon(String nombre, String mote,
+             ArrayList<Movimiento> movimientos, Tipo tipo, Tipo tipo2) {
 
+              
         this.fertilidad = 5;
-        this.ataque = ran.nextInt(10) + 1;
-        this.ataqueEspecial = ran.nextInt(10) + 1;
+        this.ataque = ran.nextInt(10) + 10;
+        this.ataqueEspecial = ran.nextInt(10) + 10;
         this.defensa = ran.nextInt(10) + 1;
         this.defensaEspecial = ran.nextInt(10) + 1;
-        this.estado = estado;
+        this.estado = Estado.SIN_ESTADO;
         this.tipo = tipo;
         this.tipo2 = tipo2;
         this.movimientos = movimientos;
         this.estamina = ran.nextInt(10) + 1;
         this.nombre = nombre;
         this.mote = mote;
-        this.nivel = nivel;
-        this.vitalidad = vitalidad;
-        this.experiencia = experiencia;
+        this.nivel = 1;
+        this.vitalidad = 100;
+        this.experiencia = 0;
+        this.velocidad = ran.nextInt(10) + 1;
 
+    }
+
+    public Pokemon(){
+        
+        
+        this.nombre = "";
+        this.mote = "";
+        this.vitalidad = 0;
+        this.ataque = 0;
+        this.defensa = 0;
+        this.ataqueEspecial = 0;
+        this.defensaEspecial = 0;
+        this.velocidad = 0;
+        this.fertilidad = 0;        
+        this.estamina = 0;
+        this.nivel = 1;
+        this.idPokemon = 0;
+        
+        
+        
     }
 
     public int getExperiencia() {
         return experiencia;
+    }
+
+    public int getIdPokemon() {
+        return idPokemon;
+    }
+
+    public void setIdPokemon(int idPokemon) {
+        this.idPokemon = idPokemon;
     }
 
     public void setExperiencia(int experiencia) {
@@ -253,11 +284,18 @@ public class Pokemon {
         return numDebil;
     }
     public boolean atacar(Pokemon rival){
+
         int danioRival = this.ataque - rival.defensa;
         if(danioRival >= 0){
-            rival.setVitalidad(rival.vitalidad - danioRival);
+            int vitalidadFinal = rival.vitalidad - danioRival;
+            if(vitalidadFinal <= 0){
+                rival.setVitalidad(0);
+            }else{
+                rival.setVitalidad(vitalidadFinal);
+            }
             return true;
         }
+        
         return false; 
     }
 }

@@ -7,5 +7,6 @@ public enum Tipo {
     TIERRA,
     PLANTA,
     VOLADOR,
+    NORMAL,
     ELECTRICO;
 }

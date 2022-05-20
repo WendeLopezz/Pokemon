@@ -4,6 +4,7 @@ public abstract class Movimiento {
     private Tipo tipo;
     private int estamina;
     private String nombre;
+    
 
     Movimiento(Tipo tipo, int estamina, String nombre) {
         this.tipo = tipo;
